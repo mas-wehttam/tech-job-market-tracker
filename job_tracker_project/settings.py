@@ -93,13 +93,20 @@ WSGI_APPLICATION = 'job_tracker_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+'''
 
+# Automatically reads the DATABASE_URL from your .env file and sets up Postgres.
+# If can't find a DATABASE_URL, safely falls back to your local SQLite file.
+DATABASES = {
+    'default': env.db('DATABASE_URL', default=f"sqlite:///{os.path.join(BASE_DIR, 'db.sqlite3')}")
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
