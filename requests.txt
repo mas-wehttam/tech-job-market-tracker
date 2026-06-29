@@ -1,0 +1,12 @@
+django
+djangorestframework
+django-filters
+django-environ
+
+selenium
+undetected-chromedriver
+
+
+
+
+
