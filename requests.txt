@@ -3,10 +3,10 @@ djangorestframework
 django-filters
 django-environ
 
+psycopg2-binary
+
 selenium
 undetected-chromedriver
 
-
-
-
+gunicorn
 
