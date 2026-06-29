@@ -9,4 +9,5 @@ selenium
 undetected-chromedriver
 
 gunicorn
+whitenoise
 
